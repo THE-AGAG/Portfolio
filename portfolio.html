@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Sécurisé | Agag_</title>
+    <title>Portfolio | Agag_</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,7 +14,7 @@
         <div class="modal-content animate-in">
             <i class="fas fa-shield-alt shield-icon"></i>
             <h2>Protocole de Sécurité</h2>
-            <p>Ce portfolio CIEL nécessite l'enregistrement de votre <strong>IP</strong> et de votre <strong>position GPS précise</strong> pour la journalisation des accès de sécurité.</p>
+            <p>Ce portfolio nécessite l'enregistrement de votre <strong>IP</strong> et de votre <strong>position GPS précise</strong> pour la journalisation des accès de sécurité.</p>
             <div class="modal-buttons">
                 <button id="btn-accept" class="btn-main">Accepter et Entrer</button>
                 <button id="btn-refuse" class="btn-secondary">Refuser</button>
@@ -30,42 +30,86 @@
                 <button id="close-cgu" class="close-btn">&times;</button>
             </div>
             <div class="modal-body">
-                <h3>1. Collecte de données</h3>
-                <p>Nous collectons votre adresse IP et vos coordonnées GPS (via GeoPoint) uniquement après votre consentement.</p>
-                <h3>2. Finalité et Doublons</h3>
-                <p>Pour limiter la rétention de données, chaque visiteur ne possède qu'un seul enregistrement. Si vous revenez, votre ancienne entrée est mise à jour avec la nouvelle date.</p>
-                <h3>3. Droits RGPD</h3>
-                <p>Vous pouvez télécharger ou supprimer vos données via les icônes flottantes en bas à droite de l'écran.</p>
+                <h3>Collecte de données</h3>
+                <p>Nous collectons votre adresse IP et votre position GPS (GeoPoint) après consentement. Pour limiter les données, chaque IP ne possède qu'un seul enregistrement mis à jour à chaque visite.</p>
+                <h3>Vos Droits</h3>
+                <p>Vous pouvez télécharger ou supprimer vos données via les icônes en bas à droite.</p>
             </div>
         </div>
     </div>
 
     <aside>
-        <div class="owner-box">OWNER : Agag_</div>
+        <div class="owner-box">
+            OWNER : Agag_
+        </div>
+
         <div class="menu-box">
             <h3><i class="fas fa-bars"></i> MENU</h3>
             <nav>
                 <ul>
-                    <li><a href="#intro">Présentation</a></li>
-                    <li><a href="#mes-etudes">Mes études</a></li>
-                    <li><a href="#mes-projets">Mes projets</a></li>
+                    <li>Présentation</li>
+                    <ol>
+                        <li><a href="#intro-cher-lecteur">Introduction</a></li>
+                        <li><a href="#mes-etudes">Mes études</a></li>
+                        <li><a href="#mes-projets">Mes projets</a></li>
+                    </ol>
                 </ul>
             </nav>
+            <div class="settings">
+                <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+            </div>
+        </div>
+
+        <div class="faq-box">
+            <strong>FAQ</strong>
+            <input type="email" placeholder="Votre Mail">
+            <textarea placeholder="Votre Question"></textarea>
+            <button>Envoyer</button>
         </div>
     </aside>
 
     <main>
-        <section id="intro">
-            <h1>Bienvenue</h1>
-            <p>Étudiant en BTS CIEL (Cybersecurité Informatique Réseaux Électronique).</p>
+        <section class="useful-links">
+            <h2>Liens Utiles</h2>
+            <div class="link-list">
+                <a href="https://www.youtube.com/@agag__" target="_blank"><span><i class="fab fa-youtube"></i> Youtube</span></a>
+                <a href="https://discord.gg/Agag" target="_blank"><span><i class="fab fa-discord"></i> Discord</span></a>
+                <a href="https://github.com/THEAGAG" target="_blank"><span><i class="fab fa-github"></i> Github</span></a>
+            </div>
         </section>
-        <section id="mes-etudes">
-            <h2>Mes études</h2>
-            <p>Option Électronique et Réseaux.</p>
-        </section>
-        <section id="mes-projets">
-            <h2>Mes projets</h2>
-            <p>Projets de cybersécurité et développement.</p>
+
+        <section class="presentation-box">
+            <h1>Présentation du site</h1>
+            <h3>Bonjour,</h3>
+            <h4 id="intro-cher-lecteur">cher lecteur,</h4>
+            <p>
+                Ce site web a été créé dans le but de servir de portfolio. 
+                Il regroupe différents projets réalisés au cours de mes 
+                études et sur mon temps personnel, afin d'en faire mon 
+                <strong>Curriculum Vitae</strong> numérique. Ce site est divisé 
+                en différentes parties accessibles via le <strong>Menu</strong> 
+                présent sur la page.
+            </p>
+            <h4 id="mes-etudes">Mes études :</h4>
+            <p>
+                Pour commencer je vais vous présenter mes années d'études 
+                j'ai fait un <strong>Brevet de Technicien Supérieur (BTS)</strong>
+                en <strong>Cybersecurité Infomatique Réseaux Électronique Option Électronique et Réseaux (CIEL)</strong>
+            </p>
+            <h4 id="mes-projets">Mes projets :</h4>
+            <p>
+                Pour commencer, la présentation de mes projets ce fera en trois parties,
+                <strong>projets Terminer</strong>, <strong>projets En cours</strong> et 
+                <strong>projets à venir</strong>.
+                C'est différents projets seront présentés dans les sections suivantes, 
+                et seront mis à jour régulièrement 
+                au fur et à mesure de l'avancement de mes projets. Afin que le vous 
+                puissiez suivre l'évolution de mes projets 
+                et voir les différentes étapes de leur réalisation.
+                <strong><br>Je vous invite à consulter régulièrement cette section 
+                pour découvrir mes nouveaux projets et 
+                suivre l'avancement de ceux en cours.</strong>
+            </p>
         </section>
     </main>
 
@@ -77,23 +121,21 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, deleteDoc, doc, GeoPoint } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+        import { getFirestore, collection, doc, setDoc, deleteDoc, GeoPoint } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
-        // /!\ REMPLACEZ CES INFOS PAR VOTRE CONFIGURATION FIREBASE /!\
+        // Remplacez par vos clés récupérées sur la console Firebase
         const firebaseConfig = {
-            apiKey: "AIzaSyAj7DQ9Pwq05bDYypFC-HqZ9gUUtBKLLgQ",
-            authDomain: "portfolio-f01ae.firebaseapp.com",
-            databaseURL: "https://portfolio-f01ae-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "portfolio-f01ae",
-            storageBucket: "portfolio-f01ae.firebasestorage.app",
-            messagingSenderId: "491066881066",
-            appId: "1:491066881066:web:15e037efd17969b6eb7f53",
-            measurementId: "G-B0BKPR6LHD"
-};
+            apiKey: "VOTRE_API_KEY",
+            authDomain: "VOTRE_PROJET.firebaseapp.com",
+            projectId: "VOTRE_PROJET_ID",
+            storageBucket: "VOTRE_PROJET.appspot.com",
+            messagingSenderId: "VOTRE_SENDER_ID",
+            appId: "VOTRE_APP_ID"
+        };
 
         const app = initializeApp(firebaseConfig);
         window.db = getFirestore(app);
-        window.dbUtils = { collection, addDoc, deleteDoc, doc, GeoPoint };
+        window.dbUtils = { collection, doc, setDoc, deleteDoc, GeoPoint };
     </script>
     <script src="javascript.js"></script>
 </body>
