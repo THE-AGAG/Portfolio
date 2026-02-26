@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Sécurisé | Agag_</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="consent-modal" class="modal-overlay">
+        <div class="modal-content animate-in">
+            <i class="fas fa-shield-alt shield-icon"></i>
+            <h2>Protocole de Sécurité</h2>
+            <p>Pour accéder à ce portfolio, nous devons enregistrer votre <strong>adresse IP</strong> et votre <strong>position GPS précise</strong> à des fins d'identification et de cybersécurité.</p>
+            <div class="modal-buttons">
+                <button id="btn-accept" class="btn-main">Accepter et Entrer</button>
+                <button id="btn-refuse" class="btn-secondary">Refuser</button>
+            </div>
+            <p class="modal-footer">En acceptant, vous adhérez à nos <a href="#" id="link-cgu-modal">Conditions d'Utilisation</a>.</p>
+        </div>
+    </div>
+
+    <div id="cgu-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content wide-modal animate-in">
+            <div class="modal-header">
+                <h2><i class="fas fa-file-contract"></i> Conditions d'Utilisation</h2>
+                <button id="close-cgu" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Cadre Juridique</h3>
+                <p>Ce site collecte des données personnelles (IP, Géolocalisation haute précision) conformément au RGPD. La base légale est votre consentement explicite.</p>
+                <h3>Utilisation des données</h3>
+                <p>Les données sont stockées de manière sécurisée sur Firebase (serveurs Google Cloud) et servent à la démonstration technique de traçabilité réseau.</p>
+                <h3>Vos Droits</h3>
+                <p>Conformément au droit à la portabilité et à l'oubli, vous pouvez télécharger ou supprimer vos données via les boutons flottants en bas à droite.</p>
+            </div>
+        </div>
+    </div>
+
+    <aside>
+        <div class="owner-box">OWNER : Agag_</div>
+        <div class="menu-box">
+            <h3><i class="fas fa-bars"></i> MENU</h3>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#mes-etudes">Mes études</a></li>
+                    <li><a href="#mes-projets">Mes projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <main>
+        <section id="intro">
+            <h1>Bienvenue</h1>
+            <p>Étudiant en BTS CIEL (Cybersecurité Informatique Réseaux Électronique).</p>
+        </section>
+        <section id="mes-etudes">
+            <h2>Mes études</h2>
+            <p>Option Électronique et Réseaux.</p>
+        </section>
+        <section id="mes-projets">
+            <h2>Mes projets</h2>
+            <p>Visualisation de projets de cybersécurité et développement web.</p>
+        </section>
+    </main>
+
+    <div class="gdpr-floating-zone">
+        <button id="btn-open-cgu" class="btn-tool"><i class="fas fa-info-circle"></i> CGU</button>
+        <button id="btn-download-data" title="Télécharger mes données" class="btn-tool"><i class="fas fa-download"></i></button>
+        <button id="btn-delete-data" title="Supprimer mes données" class="btn-tool btn-danger"><i class="fas fa-trash"></i></button>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, deleteDoc, doc, GeoPoint } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+
+        // /!\ REMPLACEZ CES INFOS PAR VOTRE CONFIGURATION FIREBASE /!\
+        const firebaseConfig = {
+            apiKey: "AIzaSyAj7DQ9Pwq05bDYypFC-HqZ9gUUtBKLLgQ",
+            authDomain: "portfolio-f01ae.firebaseapp.com",
+            databaseURL: "https://portfolio-f01ae-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "portfolio-f01ae",
+            storageBucket: "portfolio-f01ae.firebasestorage.app",
+            messagingSenderId: "491066881066",
+            appId: "1:491066881066:web:15e037efd17969b6eb7f53",
+            measurementId: "G-B0BKPR6LHD"
+};
+
+        const app = initializeApp(firebaseConfig);
+        window.db = getFirestore(app);
+        window.dbUtils = { collection, addDoc, deleteDoc, doc, GeoPoint };
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>
