@@ -125,13 +125,15 @@
 
         // Remplacez par vos clés récupérées sur la console Firebase
         const firebaseConfig = {
-            apiKey: "VOTRE_API_KEY",
-            authDomain: "VOTRE_PROJET.firebaseapp.com",
-            projectId: "VOTRE_PROJET_ID",
-            storageBucket: "VOTRE_PROJET.appspot.com",
-            messagingSenderId: "VOTRE_SENDER_ID",
-            appId: "VOTRE_APP_ID"
-        };
+            apiKey: "AIzaSyAj7DQ9Pwq05bDYypFC-HqZ9gUUtBKLLgQ",
+            authDomain: "portfolio-f01ae.firebaseapp.com",
+            databaseURL: "https://portfolio-f01ae-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "portfolio-f01ae",
+            storageBucket: "portfolio-f01ae.firebasestorage.app",
+            messagingSenderId: "491066881066",
+            appId: "1:491066881066:web:15e037efd17969b6eb7f53",
+            measurementId: "G-B0BKPR6LHD"
+};
 
         const app = initializeApp(firebaseConfig);
         window.db = getFirestore(app);
