@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const { doc, setDoc, GeoPoint } = window.dbUtils;
         
         // On utilise l'IP comme identifiant unique
-        const customId = network.ip.replace(/\./g, "-");
+        const customId = network.ip.replace(/[\.\:]/g, "-");
 
         const logData = {
             ip: network.ip,
